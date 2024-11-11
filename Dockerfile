@@ -1,8 +1,8 @@
-FROM nginx
+FROM nginx:latest
 
-COPY .  /usr/share/nginx/html
-
+COPY ./index.html  /usr/share/nginx/html/index.html
+COPY ./dog.jpg  /usr/share/nginx/html
 # epose the image 
-EXPOSE  8080
+#EXPOSE  8080
 
 CMD ["nginx","-g","daemon off;"]
